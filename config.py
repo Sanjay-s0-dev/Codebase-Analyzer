@@ -1,4 +1,3 @@
-# python-dotenv: loads .env into os.environ; os: reads env vars
 from dotenv import load_dotenv
 import os
 
