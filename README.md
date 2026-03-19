@@ -113,7 +113,7 @@ List all previously analyzed repos with metadata.
 ## Project structure
 
 ```
-repoiq/
+Codebase-Analyzer/
 ├── main.py           # FastAPI app and endpoints
 ├── fetcher.py        # GitHub API — tree fetch and file content
 ├── chunker.py        # Text chunking with overlap and batch grouping
