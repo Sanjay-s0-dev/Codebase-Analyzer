@@ -29,7 +29,7 @@ Built with FastAPI and Groq (LLaMA-3). Results are cached in SQLite so re-analyz
 ## Setup
 
 ```bash
-git clone https://github.com/your-username/Codebase-Analyzer
+git clone https://github.com/Sanjay-s0-dev/Codebase-Analyzer
 cd Codebase-Analyzer
 
 python -m venv venv
