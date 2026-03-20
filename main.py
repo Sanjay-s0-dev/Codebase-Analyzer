@@ -1,4 +1,3 @@
-# FastAPI + BackgroundTasks for async job execution without blocking the response
 from fastapi import FastAPI, BackgroundTasks, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
