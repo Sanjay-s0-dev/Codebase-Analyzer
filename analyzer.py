@@ -51,6 +51,8 @@ Scoring rubric per category (0-20):
   10-13: average, some problems
   5-9:   poor, significant issues
   0-4:   very poor, critical issues
+IMPORTANT: Never give 0 for any category unless the code is completely missing that aspect entirely.
+If you cannot assess a category due to limited code, give a neutral score of 10.
 Score honestly based on evidence. Well-written repos should score 85-95. Only broken/messy code scores below 60.
 Each subcategory is strictly scored 0-20. overall_score is exactly the sum of all five subcategories (max 100).
 summary and rationale must never be empty strings."""

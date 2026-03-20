@@ -4,7 +4,6 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from datetime import datetime
 import uuid, time
-
 from database import init_db, get_db, AnalysisJob
 from fetcher  import fetch_repo_files
 from analyzer import run_full_analysis
@@ -18,9 +17,7 @@ def on_startup(): init_db()
 class AnalyzeRequest(BaseModel):
     repo_url: str
 
-# ---------------------------------------------------------------------------
 # Background worker
-# ---------------------------------------------------------------------------
 
 def _run_job(job_id: str, repo_url: str):
     # Runs in a thread — fetches repo then calls AI pipeline, updates job status throughout
@@ -51,9 +48,7 @@ def _run_job(job_id: str, repo_url: str):
     finally:
         db.close()
 
-# ---------------------------------------------------------------------------
-# Endpoints
-# ---------------------------------------------------------------------------
+# Api Endpoints
 
 @app.post("/analyze", summary="Start a new repo analysis")
 async def start_analysis(req: AnalyzeRequest, bg: BackgroundTasks, db: Session = Depends(get_db)):
